@@ -15,7 +15,7 @@ services:
     # マウントするボリュームを指定(ホスト:コンテナ)フォルダ単位でもファイル単位でも指定できる
     volumes:
       - ./server:/var/www:cached
-      - node_modules:/var/www/node_modules
+      
     # ログイン時のディレクトリを指定(無いディレクトリは指定できない)
     working_dir: /var/www
 
@@ -26,8 +26,6 @@ services:
     volumes:
       - ./server:/var/www
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - node_modules:/var/www/node_modules
-
     depends_on:
       - app
 
@@ -42,6 +40,3 @@ services:
       - "./mysql-data:/var/lib/mysql:cached"
     ports:
       - 3306:3306
-
-  volumes:
-    node_modules:
