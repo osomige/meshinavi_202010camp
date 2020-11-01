@@ -6,9 +6,14 @@
         <ul>
             @foreach ($restaurants as $restaurant)
                 <li class="list-unstyled border mb-5 pl-3 shadow">
-                    <a href="/restaurants/{{ $restaurant->id }}">{{ $restaurant->name }}</a>
+                    @include('layouts.restaurant',compact('restaurant'))
+                    
                 </li>
             @endforeach
         </ul>
+        <div class="d-flex justify-content-center">
+            {{ $restaurants->links() }}
+
+        </div>
     
 @endsection

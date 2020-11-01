@@ -4,7 +4,7 @@
     
 @section('content')
     
-
+@include('layouts.restaurant', compact('restaurant'))
 <table class="table-bordered mb-5 mt-3">
     <colgroup span="1" style="width:200px;background-color:#efefef;"></colgroup>
     <tbody>

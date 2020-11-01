@@ -10,7 +10,8 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {   
+        $this->call(CategoryTableSeeder::class);
         $this->call(RestaurantTableSeeder::class);
     }
 }

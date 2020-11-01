@@ -1,0 +1,8 @@
+.square-img{
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+}
+.logo {
+    font-family: 'Noto Serif JP', serif;
+    }
