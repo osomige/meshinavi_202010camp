@@ -20,6 +20,10 @@
             <td>{{ $restaurant->address }}</td>
         </tr>
         <tr>
+            <th>カテゴリー</th>
+            <td>{{ $restaurant->category->name }}</td>
+        </tr>
+        <tr>
             <th>営業時間</th>
             <td>{{ $restaurant->opentime }}</td>
         </tr>
